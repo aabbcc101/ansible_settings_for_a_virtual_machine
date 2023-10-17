@@ -1,0 +1,24 @@
+---
+# tasks file for disks_settings
+
+  - name: Creates temp directory
+    file:
+      path: "{{ temp_dir }}"
+      state: directory
+
+  - name: Copy start_resize_bash to resize image cow2
+    template:
+      src: start_resize_bash
+      dest: "{{ temp_dir }}/start_resize_bash"
+      mode: +x
+
+  - name: Execute a bash script
+    command: "{{ temp_dir }}/start_resize_bash"
+    args:
+      chdir: "{{ temp_dir }}"
+
+  - name: Delete temp directory
+    file:
+      path: "{{ temp_dir }}"
+      state: absent 
+

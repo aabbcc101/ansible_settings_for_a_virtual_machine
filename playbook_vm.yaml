@@ -1,0 +1,8 @@
+- name: Playbook Install ALL
+  hosts: all
+  become: yes
+
+  roles:
+    - system_settings
+    - disks_settings
+    - install_docker

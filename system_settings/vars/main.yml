@@ -1,0 +1,15 @@
+---
+# vars file for system_settings
+
+    packagesSystem:
+      - lsb-release
+      - gnupg2
+      - gpg
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+
+    temp_dir: /home/temp
+    user: root
+

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/vda
+  p # print the partition table 
+  d # delete a partition
+  1
+  n add a new partition
+  1
+    # default, start immediately after preceding partition
+    # default, extend partition to end of disk
+  w # write table to disk and exit 
+EOF
+
+# In the last few lines of output, we can see a problem: Re-reading the partition table failed.: Device or resource busy  along with the suggested solution. Run partprobe on /dev/vda to tell the linux kernel to load the new partition table
+
+partprobe /dev/vda 
+
+# At this point if we re-check the root filesystem, it is the same size as before
+# This is because we have expanded the partition (the area of disk that the filesystem is located in) but the filesystem has not been expanded to fll it.  Correct this with the resize2fs tool
+
+resize2fs /dev/vda1
+
+df -Th /
+

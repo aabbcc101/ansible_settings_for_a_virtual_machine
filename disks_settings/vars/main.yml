@@ -1,0 +1,4 @@
+---
+# vars file for disks_settings
+
+temp_dir: /home/temp

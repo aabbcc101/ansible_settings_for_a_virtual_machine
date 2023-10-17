@@ -1,0 +1,12 @@
+---
+# vars file for install_docker
+
+    packagesDocker:
+      -  docker-ce 
+      - docker-ce-cli
+      - containerd.io
+      - docker-compose-plugin
+
+    temp_dir: /home/temp
+    user: root
+
