@@ -9,7 +9,9 @@
       - ca-certificates
       - curl
       - software-properties-common
+      - net-tools
+      - zsh-autosuggestions
 
     temp_dir: /home/temp
-    user: root
+    user: "root"
 

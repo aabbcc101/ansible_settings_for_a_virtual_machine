@@ -8,5 +8,15 @@
     apt: 
       pkg: "{{ packagesSystem }}"
 
+  - name: add zshrc for root
+    copy:
+      src: zshrc
+      dest: /root/.zshrc
+      mode: +x
+
+  - name: change user shell to zsh
+    user:
+      name: "{{ user }}" 
+      shell: /usr/bin/zsh
 
 

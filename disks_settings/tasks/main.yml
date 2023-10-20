@@ -35,7 +35,3 @@
       fstype: 9p
       state: mounted
 
-#  - name: Mount the pointed disk from terraform  
-#    command: "mount -t 9p -o trans=virtio,version=9p2000.L,rw {{ mnt_name_in_terraform }} {{ mnt_dir }}"
-#    args:
-#      chdir: "{{ mnt_dir }}"
