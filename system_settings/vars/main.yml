@@ -11,6 +11,7 @@
       - software-properties-common
       - net-tools
       - zsh-autosuggestions
+      - ripgrep
 
     temp_dir: /home/temp
     user: "root"

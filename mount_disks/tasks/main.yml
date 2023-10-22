@@ -1,0 +1,16 @@
+---
+# tasks file for mount_disks
+
+  - name: create directory for mounting 14T
+    file:
+      path: "{{ mnt_dir_14t }}"
+      state: directory
+
+  - name: Automount 14T disk by UUID
+    ansible.posix.mount:
+      path: "{{ mnt_dir_14t }}"
+      src: "{{ mnt_name_in_terraform_14t }}"
+      opts: "trans=virtio,version=9p2000.L,rwx"
+      fstype: 9p
+      state: mounted
+

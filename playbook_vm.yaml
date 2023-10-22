@@ -4,5 +4,6 @@
 
   roles:
     - system_settings
-    - disks_settings
+    - resize_disk
+    - mount_disks
     - install_docker

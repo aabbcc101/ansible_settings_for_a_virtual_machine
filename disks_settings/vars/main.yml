@@ -1,6 +1,0 @@
----
-# vars file for disks_settings
-
-temp_dir: /home/temp
-mnt_dir_14t: /mnt/main_disk_14
-mnt_name_in_terraform_14t: /mnt 
