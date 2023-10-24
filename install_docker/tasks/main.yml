@@ -1,11 +1,11 @@
 ---
 # tasks file for install_docker
 
-#  - name: Add an Apt signing key to a specific keyring file
-#    ansible.builtin.apt_key:
-#      id: 9FED2BCBDCD29CDF762678CBAED4B055473041FA
-#      url: https://download.docker.com/linux/debian/gpg
-#      keyring: /etc/apt/trusted.gpg.d/debian.gpg
+  - name: Add an Apt signing key to a specific keyring file
+    ansible.builtin.apt_key:
+      id: 7EA0A9C3F273FCD8 
+      url: https://download.docker.com/linux/debian/gpg
+      keyring: /etc/apt/trusted.gpg.d/debian.gpg
 
   - name: somerepo | apt source
     ansible.builtin.apt_repository:

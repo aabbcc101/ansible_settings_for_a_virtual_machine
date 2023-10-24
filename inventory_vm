@@ -1,2 +1,5 @@
-192.168.1.4:11022 ansible_user=root
+# 192.168.1.4:11022 ansible_user=root
+192.168.10.2:22 ansibl_user=root
+192.168.10.11:22 ansibl_user=root
+192.168.10.12:22 ansibl_user=root
 

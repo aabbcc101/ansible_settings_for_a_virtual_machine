@@ -1,9 +1,10 @@
 - name: Playbook Install ALL
   hosts: all
+#  strategy: free
   become: yes
 
   roles:
-    - system_settings
     - resize_disk
-    - mount_disks
+    - system_settings
+#    - mount_disks
     - install_docker
